@@ -22,7 +22,9 @@ const Jobs = ({job : {
         langsAndTools.push(...tools);
     }
     return(
-  <div className="flex bg-white shadow-md m-4 p-6">
+  <div className={`flex bg-white shadow-md m-4 p-6 rounded
+   ${featured && 'border-l-4 border-teal-500 border-solid'}
+  }`}>
     <div>
       <img src={logo} alt={company} />
     </div>
