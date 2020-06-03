@@ -60,7 +60,7 @@ const Jobs = ({job : {
 
         {langsAndTools.map((langAndTool) =>
                 <span className="text-teal-500 mb-2 bg-teal-100 font-bold
-                 mr-2 py-2 rounded ">
+                 mr-2 p-2 rounded ">
                     {langAndTool}
                 </span>)
         }
