@@ -36,15 +36,15 @@ const Jobs = ({job : {
           {company}
           {isNew && (
           <span className="text-teal-100 
-          bg-teal-500 font-bold
+          bg-teal-500 
           uppercase mx-2 p-2 rounded-full">
               New!
          </span>)
           }   
           {featured && (
           <span  className="text-white
-          bg-red-700 font-bold m-2
-          uppercase px-2 py-1 rounded-full">
+          bg-red-700  m-2
+          uppercase px-2 py-2 rounded-full">
           Featured
           </span>)
           }         
