@@ -27,7 +27,7 @@ const Jobs = ({job : {
   } sm:flex-row`}>
     <div>
       <img className="-mt-16 mb-4 w-20 h-20
-       sm:my-0  sm:h-24 sm:w-24"
+       sm:my-0  sm:h-24 sm:w-48 md:w-24"
        src={logo} alt={company} />
     </div>
     <div className="flex flex-col 
@@ -55,7 +55,7 @@ const Jobs = ({job : {
       </p>
     </div>
     <div className="flex flex-wrap
-     items-center mt-4 pt-4 border-t  border-gray-200 
+     items-center mx-4 pt-4 border-t  border-gray-200 
      border-solid sm:ml-auto sm:border-0">
 
         {langsAndTools.map((langAndTool) =>
