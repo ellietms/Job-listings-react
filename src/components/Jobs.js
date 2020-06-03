@@ -15,11 +15,12 @@ const Jobs = ({job : {
     tools }
 }) => {
     const langsAndTools = [];
+    const roleAndLevel = [];
     if(role){
-        langsAndTools.push(...role);
+        roleAndLevel.push(role);
     }
     if(level){
-        langsAndTools.push(...level);
+        roleAndLevel.push(level);
     }
     if(languages) {
         langsAndTools.push(...languages);
@@ -28,7 +29,7 @@ const Jobs = ({job : {
         langsAndTools.push(...tools);
     }
     return(
-  <div className="flex bg-white shadow-md m-4 p-4">
+  <div className="flex bg-white shadow-md m-4 p-6">
     <div>
       <img src={logo} alt={company} />
     </div>
@@ -39,9 +40,16 @@ const Jobs = ({job : {
         {postedAt} . {contract} . {location}
       </p>
     </div>
-    <div className="flex ">
+    <div className="flex items-center ml-auto">
+        {
+            roleAndLevel.map((roleAndLevel) =>
+            <span className="text-teal-500 bg-teal-100 font-bold m-2 p-2 rounded">
+                    {roleAndLevel}
+            </span>)
+
+        }
         {langsAndTools.map((langAndTool) =>
-                <span>
+                <span className="text-teal-500 bg-teal-100 font-bold m-2 p-2 rounded">
                     {langAndTool}
                 </span>)
         }

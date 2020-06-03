@@ -10,7 +10,10 @@ function App() {
   useEffect(() => {setJobs(data)},[]);
   console.log(jobs);
   return (
-    <div className="App">
+    <div>
+      <header className="bg-green-900 mx-auto mb-12">
+      <img src='/images/bg-header-desktop.svg' />
+      </header>
       {jobs.length === 0 ? (
            <p>Jobs are fetching...</p>
          ) : (
