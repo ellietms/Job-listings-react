@@ -25,7 +25,21 @@ const Jobs = ({job : {
         {postedAt} . {contract} . {location}
       </p>
     </div>
-    <div></div>
+    <div>
+        { languages ? 
+            languages.map((lang) =>
+                <span>
+                    {lang}
+                </span>) : ''
+        }
+        { tools ? 
+            tools.map((tool) => 
+           <span>
+               {tool}
+           </span>  
+            ) : ''
+        }
+    </div>
   </div>
 );
 
