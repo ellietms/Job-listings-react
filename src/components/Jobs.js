@@ -13,7 +13,21 @@ const Jobs = ({job : {
     location,
     languages,
     tools }
-}) => (
+}) => {
+    const langsAndTools = [];
+    if(role){
+        langsAndTools.push(...role);
+    }
+    if(level){
+        langsAndTools.push(...level);
+    }
+    if(languages) {
+        langsAndTools.push(...languages);
+    }
+    if(tools){
+        langsAndTools.push(...tools);
+    }
+    return(
   <div className="flex bg-white shadow-md m-4 p-4">
     <div>
       <img src={logo} alt={company} />
@@ -25,22 +39,14 @@ const Jobs = ({job : {
         {postedAt} . {contract} . {location}
       </p>
     </div>
-    <div>
-        { languages ? 
-            languages.map((lang) =>
+    <div className="flex ">
+        {langsAndTools.map((langAndTool) =>
                 <span>
-                    {lang}
-                </span>) : ''
-        }
-        { tools ? 
-            tools.map((tool) => 
-           <span>
-               {tool}
-           </span>  
-            ) : ''
+                    {langAndTool}
+                </span>)
         }
     </div>
   </div>
-);
+    )};
 
 export default Jobs;
