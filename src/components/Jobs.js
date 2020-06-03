@@ -29,8 +29,18 @@ const Jobs = ({job : {
     <div className="flex flex-col justify-between  ml-4">
       <h3 className="font-bold  text-teal-500 ">
           {company}
-          {isNew && <span>New</span>}   
-          {featured && <span>featured</span>}         
+          {isNew && (
+          <span className="text-teal-100 
+          bg-teal-500 font-bold m-2 p-2 rounded-full">
+              New
+         </span>)
+          }   
+          {featured && (
+          <span  className="text-white
+          bg-red-700 font-bold m-2 px-2 py-1 rounded-full
+          ">
+          Featured</span>)
+          }         
       </h3>
       <h2 className="font-bold text-2lg">{position}</h2>
       <p className="text-gray-700">
