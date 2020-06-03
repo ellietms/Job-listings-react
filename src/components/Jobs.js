@@ -12,7 +12,8 @@ const Jobs = ({job : {
     contract,
     location,
     languages,
-    tools }
+    tools },
+    handleTagClick
 }) => {
     const langsAndTools = [role,level];
     if(languages) {
@@ -59,7 +60,9 @@ const Jobs = ({job : {
      border-solid sm:ml-auto sm:border-0">
 
         {langsAndTools.map((langAndTool) =>
-                <span className="text-teal-500 mb-2 bg-teal-100 font-bold
+                <span 
+                onClick = {() => handleTagClick(tag)}
+                className="text-teal-500 mb-2 bg-teal-100 font-bold
                  mr-2 p-2 rounded ">
                     {langAndTool}
                 </span>)

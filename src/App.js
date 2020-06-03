@@ -7,8 +7,17 @@ import './App.css';
 
 function App() {
   const [jobs,setJobs] = useState([]);
+  const [filters,setFilters] = useState([]);
   useEffect(() => {setJobs(data)},[]);
-  console.log(jobs);
+
+  const filterByTags = ({}) => {
+
+  }
+  const filteredJobs = jobs.filter(filterByTag);
+  
+  const handleTagClick = (tag) => {
+    setFilters([...filters, tag]);
+  }
   return (
     <div>
       <header className="bg-green-900 mx-auto mb-12">
@@ -18,7 +27,9 @@ function App() {
            <p>Jobs are fetching...</p>
          ) : (
            jobs.map(eachJob => (
-             <JobBoard job={eachJob} key={eachJob.id} />
+             <JobBoard job={eachJob}
+              key={eachJob.id}
+              handleTagClick={handleTagClick} />
            ))
          )
       }
