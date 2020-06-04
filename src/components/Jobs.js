@@ -45,7 +45,7 @@ const Jobs = ({job : {
           }   
           {featured && (
           <span  className="text-white
-          bg-red-700  m-2
+          bg-gray-900  m-2
           uppercase px-2 py-2 rounded-full">
           Featured
           </span>)
