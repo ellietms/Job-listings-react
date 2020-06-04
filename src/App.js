@@ -15,7 +15,7 @@ function App() {
     setFilters([...filters, tag]);
   }
 
-  const filterByTags = ({role,level,tools,languages}) => {
+  const filterBySpecificTags = ({role,level,tools,languages}) => {
     if(filters.length === 0) {
       return true;
     }
@@ -28,7 +28,7 @@ function App() {
     }
 
     return (
-    tags.some(tag => filters.includes(tag))
+    filters.every(filter => tags.includes(filter))
     )
   }
 
@@ -39,9 +39,9 @@ function App() {
   const clearFilters = () => {
     setFilters([])
   }
-  const filteredJobs = jobs.filter(filterByTags);
-  
-  
+
+  const filteredJobs = jobs.filter(filterBySpecificTags);
+
   return (
     <div>
       <header className="bg-green-900 mx-auto mb-12">
@@ -52,8 +52,8 @@ function App() {
       </header>
       <div className="container mx-auto">
       {filters.length > 0 && (
-        <div className="flex bg-white shadow-md my-16
-        mx-10 p-6 rounded">
+        <div className="flex bg-white shadow-md -my-20 mb-16
+        mx-10 p-10 rounded z-10 relative">
         {filters.map((filter) => 
         (<span onClick={() => handleFilterClick(filter)}
         className="cursor-pointer
