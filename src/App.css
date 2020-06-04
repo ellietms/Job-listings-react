@@ -1,0 +1,10 @@
+i{
+  width: 60%;
+  margin-left: auto;
+  z-index: 10px;
+}
+
+.box-container{
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}

@@ -23,8 +23,9 @@ const Jobs = ({job : {
         tags.push(...tools);
     }
     return(
-  <div className={`flex flex-col bg-white shadow-md my-16 mx-10 p-6 rounded
-   ${featured && 'border-l-4 border-teal-500 border-solid'}
+  <div className={`flex cursor-pointer flex-col bg-white shadow-md 
+  my-16 mx-10 p-6 rounded transform hover:-translate-y-1 hover:scale-110 
+  ${featured && 'border-l-4 border-teal-500 border-solid'}
   } lg:flex-row lg:my-5`}>
     <div>
       <img className="-mt-16 mb-4 w-20 h-20
