@@ -69,7 +69,10 @@ function App() {
         <button 
         onClick={clearFilters}
         className="font-bold
-        text-gray-800 ml-auto">
+        text-gray-800 ml-auto
+        bg-teal-200  px-2 rounded
+        hover:bg-teal-700
+       ">
           Clear
         </button>
         </div>

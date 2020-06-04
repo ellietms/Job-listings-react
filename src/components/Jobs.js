@@ -24,7 +24,7 @@ const Jobs = ({job : {
     }
     return(
   <div className={`flex cursor-pointer flex-col bg-white shadow-md 
-  my-16 mx-10 p-6 rounded transform hover:-translate-y-1 hover:scale-110 
+  my-16 mx-10 p-6 rounded  
   ${featured && 'border-l-4 border-teal-500 border-solid'}
   } lg:flex-row lg:my-5`}>
     <div>
@@ -63,7 +63,9 @@ const Jobs = ({job : {
         {tags.map((tag) =>
                 <span 
                 onClick = {() => handleTagClick(tag)}
-                className="text-teal-500 mb-2 bg-teal-100 font-bold
+                className="text-teal-500
+                 mb-2 bg-teal-100 font-bold
+                 transform hover:-translate-y-1 hover:scale-110
                  mr-2 p-2 rounded cursor-pointer">
                     {tag}
                 </span>)
