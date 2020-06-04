@@ -15,12 +15,12 @@ const Jobs = ({job : {
     tools },
     handleTagClick
 }) => {
-    const langsAndTools = [role,level];
+    const tags = [role,level];
     if(languages) {
-        langsAndTools.push(...languages);
+        tags.push(...languages);
     }
     if(tools){
-        langsAndTools.push(...tools);
+        tags.push(...tools);
     }
     return(
   <div className={`flex flex-col bg-white shadow-md my-16 mx-10 p-6 rounded
@@ -59,12 +59,12 @@ const Jobs = ({job : {
      items-center mx-4 pt-4 border-t  border-gray-200 
      border-solid sm:ml-auto sm:border-0">
 
-        {langsAndTools.map((langAndTool) =>
+        {tags.map((tag) =>
                 <span 
                 onClick = {() => handleTagClick(tag)}
                 className="text-teal-500 mb-2 bg-teal-100 font-bold
                  mr-2 p-2 rounded ">
-                    {langAndTool}
+                    {tag}
                 </span>)
         }
     </div>
